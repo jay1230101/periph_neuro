@@ -56,7 +56,7 @@ if st.sidebar.checkbox('Check to see Presenter'):
     with col1:
         st.write("")
     with col2:
-        image = Image.open ( 'johny.jpg' )
+        image = Image.open ( 'johny.JPG' )
         new_width = 300
         new_height = 300
         image = image.resize ( (new_width, new_height), Image.ANTIALIAS )
@@ -201,7 +201,7 @@ if st.sidebar.checkbox('Data Splitting'):
     with col1:
         st.write ( "" )
     with col2:
-        image1 = Image.open ( 'hold.jpg' )
+        image1 = Image.open ( 'hold.JPG' )
         new_width = 650
         new_height = 650
         image1 = image1.resize ( (new_width, new_height), Image.ANTIALIAS )
@@ -457,10 +457,10 @@ if st.sidebar.checkbox('Data Exploration'):
             st.altair_chart(c,use_container_width=True)
         col1,col2=st.columns(2)
         with col1:
-            image2=Image.open ( 'age.jpg' )
+            image2=Image.open ( 'age.JPG' )
             st.image(image2)
         with col2:
-            image3=Image.open ( 'ageo.jpg' )
+            image3=Image.open ( 'ageo.JPG' )
             st.image(image3)
     if selectbox1 =='Correlations 2':
         col1,col2=st.columns(2)
@@ -488,10 +488,10 @@ if st.sidebar.checkbox('Data Exploration'):
                             x='S_A ', y='VitB12',size='Gender',color='Gender', tooltip=['S_A ', 'VitB12'] )
             st.altair_chart(c,use_container_width=True)
         with col1:
-            image2=Image.open ( 'fbs.jpg' )
+            image2=Image.open ( 'fbs.JPG' )
             st.image(image2)
         with col2:
-            image3=Image.open ( 'vitb.jpg' )
+            image3=Image.open ( 'vitb.JPG' )
             st.image(image3)
 
     if selectbox1 =='HeatMap':
@@ -769,10 +769,10 @@ if tensor:
                   unsafe_allow_html=True )
     col1,col2=st.columns(2)
     with col1:
-        image4=Image.open('tensor_model.jpg' )
+        image4=Image.open('tensor_model.JPG' )
         st.image(image4)
     with col2:
-        image5=Image.open('tensor_epoch.jpg' )
+        image5=Image.open('tensor_epoch.JPG' )
         st.image(image5)
 
 st.sidebar.subheader('ROC & AUC')
@@ -1079,7 +1079,7 @@ if pred:
     with col2:
         st.markdown ( "<h3 style='text-align: center; color: black;'>Peripheral Neuropathy</h3>",
                       unsafe_allow_html=True )
-        image6=Image.open('C:/Users/j.elachkar/Desktop/peripheral_pic.jpg')
+        image6=Image.open('peripheral_pic.JPG')
         st.image(image6)
 
 
