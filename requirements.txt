@@ -52,7 +52,6 @@ importlib-metadata==4.11.3
 importlib-resources==5.2.3
 iopath==0.1.9
 ipykernel==6.13.0
-ipython==8.2.0
 ipython-genutils==0.2.0
 ipywidgets==7.7.0
 jedi==0.18.1
