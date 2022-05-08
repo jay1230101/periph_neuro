@@ -147,7 +147,7 @@ terminado==0.13.3
 terminaltables==3.1.10
 tf-estimator-nightly==2.8.0.dev2021122109
 threadpoolctl==3.1.0
-tifffile==2022.4.28
+tifffile==2021.11.2
 tinycss2==1.1.1
 toml==0.10.2
 tomli==2.0.1
