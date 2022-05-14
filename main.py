@@ -1016,6 +1016,7 @@ if acc:
     accuracy_vla = accuracy_score ( y_val, y_predict_val )
     accuracy_vla = round ( accuracy_vla, 1)
     st.write(f"Accuracy Score with RandomForest using Class Weight is {accuracy_vla *100}%")
+    
     col1,col2=st.columns(2)
     with col1:
         st.markdown ( "<h3 style='text-align: center; color: black;'>Imbalanced Dataset</h3>",
@@ -1027,7 +1028,7 @@ if acc:
     with col2:
         st.markdown ( "<h3 style='text-align: center; color: black;'>SMOTE</h3>",
                       unsafe_allow_html=True )
-        data_f2=data_f[['Model','Balanced Dataset']]
+        data_f2=data_f[['Model','SMOTE']]
         fig9=px.bar(data_f2,x='Model',y='SMOTE',color='Model',width=400,height=400)
         st.write(fig9)
 
