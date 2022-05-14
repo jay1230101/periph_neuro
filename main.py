@@ -1006,10 +1006,16 @@ if acc:
     # join all dataframes for comparison
     data_f = data_b.merge ( data_frame_smote, on='index', how='outer' )
     data_f = data_f.drop ( ['Model_y', 'index'], axis=1 )
-    data_f = data_f.rename ( {'Model_x': 'Model', 'Accuracy': 'Balanced Dataset'}, axis=1 )
+    data_f = data_f.rename ( {'Model_x': 'Model', 'Accuracy': 'SMOTE'}, axis=1 )
     data_f=data_f.drop('With RFECV',axis=1)
-    data_f = data_f.sort_values ( by='Balanced Dataset', ascending=False )
+    data_f = data_f.sort_values ( by='SMOTE', ascending=False )
     st.write(data_f)
+    rfc_sk = RandomForestClassifier ( class_weight='balanced' )
+    rfc_sk.fit ( train_prepared, y_train_val )
+    y_predict_val = rfc_sk.predict ( valid_prepared )
+    accuracy_vla = accuracy_score ( y_val, y_predict_val )
+    accuracy_vla = round ( accuracy_vla, 1)
+    st.write(f"Accuracy Score with RandomForest using Class Weight is {accuracy_vla *100}%")
     col1,col2=st.columns(2)
     with col1:
         st.markdown ( "<h3 style='text-align: center; color: black;'>Imbalanced Dataset</h3>",
@@ -1019,10 +1025,10 @@ if acc:
         px.bar()
         st.write(fig8)
     with col2:
-        st.markdown ( "<h3 style='text-align: center; color: black;'>Balanced Dataset</h3>",
+        st.markdown ( "<h3 style='text-align: center; color: black;'>SMOTE</h3>",
                       unsafe_allow_html=True )
         data_f2=data_f[['Model','Balanced Dataset']]
-        fig9=px.bar(data_f2,x='Model',y='Balanced Dataset',color='Model',width=400,height=400)
+        fig9=px.bar(data_f2,x='Model',y='SMOTE',color='Model',width=400,height=400)
         st.write(fig9)
 
 if opt:
