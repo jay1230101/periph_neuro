@@ -184,6 +184,8 @@ if st.sidebar.checkbox('Data Cleaning Process'):
     st.write(data.head(3))
     st.markdown( "<h3 style='text-align: center; color: black;'>Number of Initial Features = 60</h3>", unsafe_allow_html=True )
     st.markdown ( "<h3 style='text-align: center; color: black;'>Number of Features reduced = 41</h3>", unsafe_allow_html=True )
+    st.markdown ( "<h3 style='text-align: center; color: black;'>Number of Observations = 354</h3>", unsafe_allow_html=True )
+
 
 st.sidebar.subheader('Data Splitting')
 if st.sidebar.checkbox('Data Splitting'):
