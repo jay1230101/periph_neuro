@@ -944,8 +944,20 @@ if roc_auc:
         plt.ylabel ( "True Positive Rate" )
         plt.legend ( loc="lower right" )
         st.pyplot(fig5)
-    st.markdown ( "<h3 style='text-align: center; color: black;'>AUC achieved by (Shin et al.2021) is 82.5%</h3>",
+        
+    st.markdown ( "<h3 style='text-align: center; color: black;'>Balanced Dataset</h3>",
+                  unsafe_allow_html=True )
+    col1,col2,col3=st.columns([1,6,1])
+    with col1:
+        st.write("")
+    with col2:
+        image60 = Image.open ( 'AUC_Balanced_dataset.jpg' )
+        st.image ( image60 )
+    with col3:
+        st.write("")
+    st.markdown ( "<h3 style='text-align: center; color: black;'>AUC achieved by (Shin et al.2021) is 82.5% </h3>",
                       unsafe_allow_html=True )
+
 
 st.sidebar.subheader('Imbalanced Data')
 comp=st.sidebar.checkbox('Balanced Vs Imbalanced')
