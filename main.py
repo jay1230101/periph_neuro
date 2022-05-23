@@ -955,7 +955,7 @@ if roc_auc:
         st.image ( image60 )
     with col3:
         st.write("")
-    st.markdown ( "<h3 style='text-align: center; color: black;'>AUC achieved by (Shin et al.2021) is 82.5% </h3>",
+    st.markdown ( "<h3 style='text-align: center; color: black;'>AUC achieved by (Shin et al.2021) is 82.5% and 76% for Maryam Kazemi et at, 2016</h3>",
                       unsafe_allow_html=True )
 
 
