@@ -490,11 +490,11 @@ if st.sidebar.checkbox('Data Exploration'):
                             x='S_A ', y='VitB12',size='Gender',color='Gender', tooltip=['S_A ', 'VitB12'] )
             st.altair_chart(c,use_container_width=True)
         with col1:
-            image2=Image.open ( 'fbs.JPG' )
-            st.image(image2)
+            image20=Image.open ( 'fbs.JPG' )
+            st.image(image20)
         with col2:
-            image3=Image.open ( 'vitb.JPG' )
-            st.image(image3)
+            image30=Image.open ( 'vitb.JPG' )
+            st.image(image30)
 
     if selectbox1 =='HeatMap':
         st.markdown ( "<h1 style='text-align: center; color: black;'>HeatMap</h1>",
